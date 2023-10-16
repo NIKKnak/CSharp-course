@@ -8,7 +8,7 @@ using System.Xml.Linq;
 namespace CsharpOOP
 {
 
-    internal class Person
+    public abstract class Person : IFamily
     {
         public string Name { get; set; }
         public DateTime BirthDay { get; set; }
@@ -19,6 +19,22 @@ namespace CsharpOOP
         public Person GrandFather { get; set; }
 
         public Person[] Children { get; set; }
+
+        // Индексаторы
+        public Person[] Famely;
+        public int Count => 1 + (Famely?.Length ?? 0);
+
+        public Person this[int index]
+        {
+            get
+            {
+                if (index == 0) return this;
+                if (Famely is null) return null;
+                if (Famely.Length >= index) return Famely[index - 1];
+                return null;
+            }
+        }
+
 
 
 
@@ -45,6 +61,40 @@ namespace CsharpOOP
             this.GrandMother = grandMother;
             this.GrandFather = grandFather;
             this.Children = children;
+
+            int famelyCount = 0;
+
+            famelyCount += Father == null ? 0 : 1;
+            famelyCount += Mother == null ? 0 : 1;
+            famelyCount += Children.Length;
+
+            if (famelyCount > 0)
+            {
+                Famely = new Person[famelyCount];
+            }
+            else return;
+
+            int counter = 0;
+
+
+            if (Father != null)
+            {
+                Famely[counter] = Father;
+                counter++;
+            }
+            if (Mother != null)
+            {
+                Famely[counter] = Mother;
+                counter++;
+            }
+            foreach (var child in Children)
+            {
+                Famely[counter] = child;
+                counter++;
+
+            }
+
+
         }
 
         public void PrintFamelyInfo()
@@ -106,7 +156,7 @@ namespace CsharpOOP
                 }
             }
 
-           
+
 
 
         }
@@ -120,11 +170,13 @@ namespace CsharpOOP
             Console.Write("|");
         }
 
-
-
-
-
-
+        /*
+        public int CompareTo(object? obj)
+        {
+            if (obj == null)
+                return -1;
+            return this.BirthDay.CompareTo(obj as Person).BirthDay);
+        }*/
     }
 
     public enum Gender

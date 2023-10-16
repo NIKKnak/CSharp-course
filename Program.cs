@@ -1,4 +1,6 @@
-﻿namespace CsharpOOP
+﻿using System.Net.Sockets;
+
+namespace CsharpOOP
 {
     internal class Program
     {
@@ -11,14 +13,20 @@
             GrandMother grandMother = new GrandMother("Mari", DateTime.Parse("12.12.1991"),GrandMother.Glasses.Bleck);
 
 
-            Person son1 = new Person("Maxim", DateTime.Parse("01.01.2000"), Gender.Mail);;
-            Person son2 = new Person("Maxim", DateTime.Parse("01.01.2005"), Gender.Mail);;
-           
+            Men son1 = new Men("Nik", DateTime.Parse("01.01.2000"), Men.HairStile.Black);
+            Men son2 = new Men("Nik", DateTime.Parse("01.01.2000"), Men.HairStile.Black);
+
+            
+
 
 
             men.AddFamilyInfo(women, men,grandMother,grandFather,son1,son2);
-            men.PrintFamelyInfo();
-            
+            //men.PrintFamelyInfo();
+
+            for (int i = 0; i < men.Count; i++)
+            {
+                men[i].PrintPerson();
+            }
 
 
 

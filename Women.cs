@@ -30,5 +30,6 @@ namespace CsharpOOP
             Console.WriteLine($"Имя: {Name}, ДР:{BirthDay}, Украшение:{decoration}, Пол:{Gender}");
         }
 
+       
     }
 }
