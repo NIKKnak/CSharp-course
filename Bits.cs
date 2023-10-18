@@ -53,7 +53,7 @@ namespace CsharpOOP
             return ((Value >> index) & 1) == 1;
         }
 
-            public void SetBit(bool bit, int index)
+        public void SetBit(bool bit, int index)
         {
             if (index > MaxBitsCount || index < 0)
             {
@@ -70,8 +70,12 @@ namespace CsharpOOP
             }
         }
 
-        public static implicit operator byte(Bits b) => (byte)b.Value;
-        public static explicit operator Bits(byte b) => new Bits(b);
+        public static implicit operator byte(Bits b) => new Bits(b.Value);
+        public static implicit operator long(Bits b) => new Bits(b.Value);
+        public static implicit operator int(Bits b) => new Bits(b.Value);
+
+
+
 
     }
 }
