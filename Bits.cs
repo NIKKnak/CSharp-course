@@ -13,7 +13,6 @@ namespace CsharpOOP
         void SetBit(bool bit, int index);
     }
 
-
     public class Bits : IBits
     {
         public Bits(byte b)
@@ -42,8 +41,6 @@ namespace CsharpOOP
 
         public long Value { get; set; } = 0;
         private int MaxBitsCount { get; set; }
-
-
 
         public bool GetBit(int index)
         {
@@ -76,21 +73,6 @@ namespace CsharpOOP
         public static implicit operator byte(Bits b) => (byte)b.Value;
         public static explicit operator Bits(byte b) => new Bits(b);
 
-
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-}
+
