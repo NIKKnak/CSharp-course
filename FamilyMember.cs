@@ -6,12 +6,6 @@ using System.Threading.Tasks;
 
 namespace CsharpOOP
 {
-
-
-
-
-
-
     public class FamilyMember
     {
         public FamilyMember Mother { get; set; }
@@ -22,25 +16,11 @@ namespace CsharpOOP
 
     }
 
-
-    /*public enum Gender
-    {
-        Mail,
-        Female
-    }*/
-
-
-
-
     public class AbultFamelyMember : FamilyMember
     {
         public FamilyMember[] Children { get; set; }
 
     }
-
-
-
-
 
 
 }
