@@ -99,7 +99,7 @@ namespace CsharpOOP
 
 
 
-            /*
+
             List<Student> students = new List<Student>
             {
                 new Student { Name = "Alice", Age = 22, Faculty = "Engineering" },
@@ -119,7 +119,7 @@ namespace CsharpOOP
             findAge.ToList().ForEach(x => Console.WriteLine($"{x.Name} - {x.Age}"));
             sortName.ToList().ForEach(x => Console.WriteLine($"{x}, "));
             findEngeners.ToList().ForEach(x => Console.WriteLine($"{x.Name} - {x.Faculty}"));
-            */
+
 
             // ----------------------------------------------------------------------
 
@@ -141,7 +141,6 @@ namespace CsharpOOP
                 new Order { OrderID = 3, CustomerName = "Charlie", OrderDate = new DateTime(2023, 6, 2), TotalAmount = 220.0 },
                 new Order { OrderID = 4, CustomerName = "David", OrderDate = new DateTime(2023, 6, 3), TotalAmount = 100.0 },
                 new Order { OrderID = 5, CustomerName = "Eve", OrderDate = new DateTime(2023, 6, 4), TotalAmount = 85.5 },
-    // Добавьте другие заказы по вашему усмотрению
             };
 
             //Отсортировать заказы по сумме в убывающем порядке.
@@ -166,6 +165,124 @@ namespace CsharpOOP
             totalAmountForClient.ToList().ForEach(x => Console.WriteLine($"{x.name} {x.count} "));
             Console.WriteLine(richClient);
             clientTA.ToList().ForEach(x => Console.WriteLine($"{x.name} {x.sumTotalAmount} "));
+
+            // ----------------------------------------------------------------------
+
+
+            //В этой задаче у вас есть список строк, и ваша задача – отсортировать этот список
+            //в порядке возрастания длины строк,используя лямбда - выражение.
+            //Ниже приведены начальные данные и возможное решение:
+
+
+            List<string> strings = new List<string>
+        {
+            "Apple",
+            "Banana",
+            "Cherry",
+            "Date",
+            "Fig",
+            "Grapes"
+        };
+
+            var sortList = strings.OrderBy(x => x.Length).ToList();
+            sortList.ForEach(Console.WriteLine);
+            //или
+            strings.OrderBy(x => x.Length).ToList().ForEach(x => Console.WriteLine(x));
+
+
+            // ----------------------------------------------------------------------
+
+            List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 45, 65, 98, 15, 87, 15, 854, 34, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+
+            numbers.Sort((x, y) => x.CompareTo(y));
+
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
+
+            // ----------------------------------------------------------------------
+           // хотим выбрать все строки, содержащие определенную подстроку,
+           // с использованием лямбда-выражения.Вот начальные данные и решение задачи:
+
+
+            List<string> words = new List<string>
+        {
+            "apple",
+            "banana",
+            "cherry",
+            "date",
+            "grape",
+            "kiwi",
+            "lemon",
+        };
+
+            string searchTerm = "an";
+
+            words.Where(x => x.Contains(searchTerm)).ToList().ForEach(x => Console.WriteLine($"{searchTerm}: содержит: {x}"));
+
+
+            // ----------------------------------------------------------------------
+
+
+
+
+            List<int> numbers2 = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 45, 65, 98, 15, 87, 15, 854, 34, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+
+            numbers2.Select(x => x * 2).ToList().ForEach(x => Console.WriteLine(x));
+
+            // ----------------------------------------------------------------------
+
+            //что у нас есть список объектов, и мы хотим отфильтровать этот список
+            //по определенному критерию, используя лямбда - выражение.
+            //Вот начальные данные и решение задачи:
+
+
+            List<Order> orders2 = new List<Order>
+            {
+                new Order { OrderID = 1, CustomerName = "Alice", OrderDate = new DateTime(2023, 6, 1), TotalAmount = 150.0 },
+                new Order { OrderID = 2, CustomerName = "Bob", OrderDate = new DateTime(2023, 6, 2), TotalAmount = 75.5 },
+                new Order { OrderID = 3, CustomerName = "Charlie", OrderDate = new DateTime(2023, 6, 2), TotalAmount = 220.0 },
+                new Order { OrderID = 4, CustomerName = "David", OrderDate = new DateTime(2023, 6, 3), TotalAmount = 100.0 },
+                new Order { OrderID = 5, CustomerName = "Eve", OrderDate = new DateTime(2023, 6, 4), TotalAmount = 85.5 },
+            };
+
+            string str = "A";
+
+            orders2.Where(x => x.CustomerName.StartsWith("A")).ToList().ForEach(x => Console.WriteLine(x.CustomerName));
+
+            // ----------------------------------------------------------------------
+
+            HashSet<int> hashSet = new HashSet<int> { 1, 2, 3, 4, 5 };
+            List<int> list = new List<int> { 3, 4, 5, 6, 7 };
+
+
+            var result = hashSet.Intersect(list);
+
+
+            foreach (var item in result)
+            {
+                Console.WriteLine(item);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // ----------------------------------------------------------------------
+            //Дан массив и число. Найдите три числа в массиве сумма которых р
+            //авна искомому числу. Подсказка: если взять первое число в массиве,
+            //можно ли найти в оставшейся его части два числа равных по сумме первому.
+
 
 
 
