@@ -30,9 +30,7 @@ namespace CsharpOOP
                 }
             }
 
-            Console.WriteLine("Не найдены числа, сумма которых равна 10.");
-
-
+            Console.WriteLine($"Не найдены числа, сумма которых равна {result}.");
 
         }
 
