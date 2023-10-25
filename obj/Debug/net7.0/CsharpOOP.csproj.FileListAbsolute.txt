@@ -26,3 +26,17 @@ C:\Users\NIKnak\source\repos\CSharp-course\bin\Debug\net7.0\CsharpOOP.dll
 C:\Users\NIKnak\source\repos\CSharp-course\bin\Debug\net7.0\CsharpOOP.pdb
 C:\Users\NIKnak\source\repos\CSharp-course\obj\Debug\net7.0\CsharpOOP.genruntimeconfig.cache
 C:\Users\NIKnak\source\repos\CSharp-course\obj\Debug\net7.0\ref\CsharpOOP.dll
+C:\Users\nik88\Source\Repos\CSharp-course\bin\Debug\net7.0\CsharpOOP.exe
+C:\Users\nik88\Source\Repos\CSharp-course\bin\Debug\net7.0\CsharpOOP.deps.json
+C:\Users\nik88\Source\Repos\CSharp-course\bin\Debug\net7.0\CsharpOOP.runtimeconfig.json
+C:\Users\nik88\Source\Repos\CSharp-course\bin\Debug\net7.0\CsharpOOP.dll
+C:\Users\nik88\Source\Repos\CSharp-course\bin\Debug\net7.0\CsharpOOP.pdb
+C:\Users\nik88\Source\Repos\CSharp-course\obj\Debug\net7.0\CsharpOOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nik88\Source\Repos\CSharp-course\obj\Debug\net7.0\CsharpOOP.AssemblyInfoInputs.cache
+C:\Users\nik88\Source\Repos\CSharp-course\obj\Debug\net7.0\CsharpOOP.AssemblyInfo.cs
+C:\Users\nik88\Source\Repos\CSharp-course\obj\Debug\net7.0\CsharpOOP.csproj.CoreCompileInputs.cache
+C:\Users\nik88\Source\Repos\CSharp-course\obj\Debug\net7.0\CsharpOOP.dll
+C:\Users\nik88\Source\Repos\CSharp-course\obj\Debug\net7.0\refint\CsharpOOP.dll
+C:\Users\nik88\Source\Repos\CSharp-course\obj\Debug\net7.0\CsharpOOP.pdb
+C:\Users\nik88\Source\Repos\CSharp-course\obj\Debug\net7.0\CsharpOOP.genruntimeconfig.cache
+C:\Users\nik88\Source\Repos\CSharp-course\obj\Debug\net7.0\ref\CsharpOOP.dll
