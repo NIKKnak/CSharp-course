@@ -254,9 +254,12 @@ namespace CsharpOOP
             //авна искомому числу. Подсказка: если взять первое число в массиве,
             //можно ли найти в оставшейся его части два числа равных по сумме первому.
 
+            // Test delegate
+            MyDelegate myDelegate = new MyDelegate(DelegateTest.Print);
+            myDelegate();
 
 
-            
+            DelegateTest.Print4();
 
         }
 
